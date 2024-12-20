@@ -66,5 +66,26 @@
 <script src="js/main.js" async></script>
 
 <script src="../../../js/lib/ga.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const startButton = document.getElementById('startButton');
+        const callButton = document.getElementById('callButton');
+        let step = 0;
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                if (step === 0) {
+                    startButton.click();
+                    step++;
+                } else if (step === 1) {
+                    callButton.click();
+                    step++;
+                }
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

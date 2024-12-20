@@ -55,5 +55,17 @@
 
 <script src="../../../js/lib/ga.js"></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const showVideoButton = document.getElementById('showVideo');
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                showVideoButton.click();
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
